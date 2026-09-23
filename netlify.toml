@@ -1,0 +1,21 @@
+# Static site — no build step, publish the repo root as-is.
+[build]
+  publish = "."
+  command = ""
+
+# Media and fonts change rarely; cache them for a week.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*.mp4"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# styles.css is cache-busted with ?v=, so let it revalidate quickly.
+[[headers]]
+  for = "/styles.css"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"

@@ -1,0 +1,13 @@
+# OS / editor
+.DS_Store
+*.bak
+
+# Claude Code / tooling (not part of the site)
+.claude/
+.impeccable/
+.superpowers/
+docs/
+
+# Node / Netlify
+node_modules/
+.netlify/
