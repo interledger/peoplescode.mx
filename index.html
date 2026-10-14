@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="El código de la gente - Documental sobre inclusión financiera en comunidades rurales de México. Actualmente en circuito internacional de festivales.">
-  <title>El código de la gente - Documental</title>
+  <meta name="description" content="El Código de la Gente - Documental sobre inclusión financiera en comunidades rurales de México. Actualmente en circuito internacional de festivales.">
+  <title>El Código de la Gente - Documental</title>
 
   <link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
@@ -14,26 +14,73 @@
   <!-- Social sharing -->
   <link rel="canonical" href="https://peoplescode.mx/">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="El código de la gente">
-  <meta property="og:title" content="El código de la gente — Documental">
+  <meta property="og:site_name" content="El Código de la Gente">
+  <meta property="og:title" content="El Código de la Gente — Documental">
   <meta property="og:description" content="Documental sobre soberanía financiera, identidad y tecnología: quién escribe las reglas del dinero y quién las reescribe para que funcionen mejor para todos.">
   <meta property="og:image" content="https://peoplescode.mx/assets/trailer-poster.jpg">
   <meta property="og:url" content="https://peoplescode.mx/">
-  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale" content="es_MX">
   <meta property="og:locale:alternate" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="El código de la gente — Documental">
+  <meta name="twitter:title" content="El Código de la Gente — Documental">
   <meta name="twitter:description" content="Documental sobre soberanía financiera, identidad y tecnología: quién escribe las reglas del dinero y quién las reescribe para que funcionen mejor para todos.">
   <meta name="twitter:image" content="https://peoplescode.mx/assets/trailer-poster.jpg">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400;1,700&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Movie",
+    "name": "El Código de la Gente",
+    "alternateName": "The People’s Code",
+    "url": "https://peoplescode.mx/",
+    "description": "Ambientada en México, El Código de la Gente sigue la alianza inesperada entre un visionario programador alemán y una activista mixteca que se unen para desafiar siglos de exclusión económica.",
+    "image": "https://peoplescode.mx/assets/trailer-cover-es.webp",
+    "genre": "Documental",
+    "inLanguage": "es",
+    "countryOfOrigin": {
+      "@type": "Country",
+      "name": "México"
+    },
+    "director": {
+      "@type": "Person",
+      "name": "Coizta Grecko B"
+    },
+    "producer": [
+      {
+        "@type": "Person",
+        "name": "Ana Paula Valdovinos"
+      },
+      {
+        "@type": "Person",
+        "name": "Vanessa Ciangherotti"
+      }
+    ],
+    "productionCompany": [
+      {
+        "@type": "Organization",
+        "name": "Gantha Creative House",
+        "url": "https://gantha.mx"
+      },
+      {
+        "@type": "Organization",
+        "name": "VAP"
+      }
+    ],
+    "trailer": {
+      "@type": "VideoObject",
+      "name": "El Código de la Gente — Tráiler oficial",
+      "description": "Tráiler oficial del documental El Código de la Gente.",
+      "thumbnailUrl": "https://peoplescode.mx/assets/trailer-cover-es.webp",
+      "contentUrl": "https://peoplescode.mx/trailer-web-25mb.mp4",
+      "duration": "PT2M4S"
+    }
+  }
+  </script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3/dist/plyr.css">
-  <script src="https://cdn.jsdelivr.net/npm/plyr@3/dist/plyr.js"></script>
-  <link rel="stylesheet" href="styles.css?v=47">
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js"></script>
+  <link rel="stylesheet" href="styles.css?v=72">
 </head>
 <body class="loading">
 
@@ -47,6 +94,18 @@
 
   <!-- NAVIGATION -->
   <header class="nav" id="nav">
+    <div class="menu-controls">
+      <!-- Language -->
+      <div class="lang-switch" role="group" aria-label="Idioma / Language">
+        <button class="lang-opt active" data-set-lang="es" aria-pressed="true" lang="es">ES</button>
+        <button class="lang-opt" data-set-lang="en" aria-pressed="false" lang="en">EN</button>
+      </div>
+      <!-- Music -->
+      <button class="ctrl-circle music-btn" id="musicToggle" aria-label="Activar musica" aria-pressed="false">
+        <svg class="music-icon music-icon--on" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="18" r="4"/><path d="M12 18V2l7 4"/></svg>
+        <svg class="music-icon music-icon--off" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="18" r="4"/><path d="M12 18V2l7 4"/><path d="m2 2 20 20"/></svg>
+      </button>
+    </div>
     <button class="burger" id="burger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -57,28 +116,15 @@
     <div class="menu-inner">
       <ul class="menu-nav">
         <li><a href="#s1" class="menu-link"><span class="menu-num">01</span><span class="lang-es">El Documental</span><span class="lang-en">The Documentary</span></a></li>
-        <li><a href="#s2" class="menu-link"><span class="menu-num">02</span><span class="lang-es">Protagonistas</span><span class="lang-en">People</span></a></li>
-        <li><a href="#s4" class="menu-link"><span class="menu-num">03</span><span class="lang-es">La tecnología</span><span class="lang-en">The Technology</span></a></li>
-        <li><a href="#s3" class="menu-link"><span class="menu-num">04</span><span class="lang-es">Rodaje</span><span class="lang-en">Behind the Scenes</span></a></li>
+        <li><a href="#s2" class="menu-link"><span class="menu-num">02</span><span class="lang-es">La tecnología</span><span class="lang-en">The Technology</span></a></li>
+        <li><a href="#s3" class="menu-link"><span class="menu-num">03</span><span class="lang-es">Protagonistas</span><span class="lang-en">People</span></a></li>
+        <li><a href="#s4" class="menu-link"><span class="menu-num">04</span><span class="lang-es">Rodaje</span><span class="lang-en">Behind the Scenes</span></a></li>
         <li><a href="#footer-credits" class="menu-link"><span class="menu-num">05</span><span class="lang-es">Créditos</span><span class="lang-en">Credits</span></a></li>
       </ul>
-
-      <div class="menu-controls">
-        <!-- Language toggle -->
-        <div class="toggle-wrap">
-          <span class="toggle-label active" id="label-es">ESP</span>
-          <button class="toggle-pill" id="langToggle" aria-label="Cambiar idioma"></button>
-          <span class="toggle-label" id="label-en">ENG</span>
-        </div>
-        <!-- Music toggle -->
-        <div class="toggle-wrap">
-          <span class="toggle-label toggle-icon toggle-icon--muted">&#9835;</span>
-          <button class="toggle-pill" id="musicToggle" aria-label="Activar musica"></button>
-          <span class="toggle-label toggle-icon">&#9835;</span>
-        </div>
-      </div>
     </div>
   </div>
+
+  <main id="main">
 
   <!-- HERO -->
   <section class="hero" id="hero" data-flow-section>
@@ -86,7 +132,7 @@
 
       <!-- Background video (loops silently; swap src for your real 10s clip) -->
       <video class="hero-video" autoplay muted loop playsinline preload="auto"
-             src="hero-bg.mp4?v=2" aria-hidden="true" id="heroBgVideo"></video>
+             src="hero-bg.mp4?v=3" aria-hidden="true" id="heroBgVideo"></video>
 
       <!-- Cinematic gradient overlay -->
       <div class="hero-vignette"></div>
@@ -95,8 +141,8 @@
       <div class="hero-content">
 
         <h1 class="hero-title">
-          <span class="lang-es"><span class="ht-line-1">El código</span><br><span class="ht-line-2">de la <span id="hero-scramble">gente</span></span></span>
-          <span class="lang-en">The People's<br><span id="hero-scramble-en">Code</span></span>
+          <span class="lang-es"><span class="ht-line-1">El Código</span><br><span class="ht-line-2">de la <span id="hero-scramble">Gente</span></span></span>
+          <span class="lang-en">The People’s<br><span id="hero-scramble-en">Code</span></span>
         </h1>
 
         <p class="hero-subtitle">( vol. ) &nbsp;[ 1 ] &nbsp;méxico &nbsp;&gt;</p>
@@ -125,26 +171,27 @@
 
         <!-- Laurel awards -->
         <div class="hero-laurels">
-          <img src="assets/laurel1.png" alt="Laurel 1">
-          <img src="assets/laurel2.png" alt="Laurel 2">
-          <img src="assets/laurel3.png" alt="Laurel 3">
-          <img src="assets/laurel4.png" alt="Laurel 4">
-          <img src="assets/laurel5.png" alt="Laurel 5">
-          <img src="assets/laurel6.png" alt="Laurel 6">
-          <img src="assets/laurel7.png" alt="Laurel 7">
-          <img src="assets/laurel8.png" alt="Laurel 8">
-          <img src="assets/laurel9.png" alt="Laurel 9">
-          <img src="assets/laurel10.png" alt="Laurel 10">
-          <img src="assets/laurel11.png" alt="Laurel 11">
-          <img src="assets/laurel12.png" alt="Laurel 12">
-          <img src="assets/laurel13.png" alt="Laurel 13">
-          <img src="assets/laurel14.png" alt="Laurel 14">
-          <img src="assets/laurel15.png" alt="Laurel 15">
-          <img src="assets/laurel16.png" alt="21 DOCSMX — Selección Oficial 2026">
-          <img src="assets/laurel17.png" alt="Lift-Off Global Network Ámsterdam — Selección Oficial 2026">
-          <img src="assets/laurel18.png" alt="The North Film Festival Madrid — Selección Oficial 2027">
-          <img src="assets/laurel19.png" alt="Matera International Film Festival (MATIFF) — Selección Oficial 2026">
-          <img src="assets/laurel20.png" alt="Lift-Off Global Network Sídney — Selección Oficial 2026">
+          <img src="assets/laurels/01-golden-bridge-istanbul.webp" alt="Golden Bridge İstanbul Short Film Festival — Selección Oficial 2026">
+          <img src="assets/laurels/02-robinson-film-awards.webp" alt="Robinson Film Awards International Film Festival — Selección Oficial 2026">
+          <img src="assets/laurels/03-reale-film-festival.webp" alt="Reale Film Festival, Monthly Awards — Selección Oficial 2026">
+          <img src="assets/laurels/04-new-york-international-film-awards.webp" alt="New York International Film Awards (NYIFA) — Selección Oficial 2026">
+          <img src="assets/laurels/05-athens-international-art-film-festival.webp" alt="Athens International Monthly Art Film Festival — Selección Oficial 2027">
+          <img src="assets/laurels/06-arff-berlin.webp" alt="ARFF Berlin International Film Festival — Selección Oficial 2026">
+          <img src="assets/laurels/07-tokyo-lift-off.webp" alt="Tokyo Lift-Off Film Festival — Selección Oficial 2026">
+          <img src="assets/laurels/08-budapest-short-cut.webp" alt="Budapest Short Cut Film Festival — Selección Oficial 2026">
+          <img src="assets/laurels/09-stockholm-city-film-festival.webp" alt="Stockholm City Film Festival — Selección Oficial 2026">
+          <img src="assets/laurels/10-sweden-film-awards.webp" alt="Sweden Film Awards — Selección Oficial 2026">
+          <img src="assets/laurels/11-los-angeles-movie-awards.webp" alt="Los Angeles Movie Awards — Selección Oficial 2026">
+          <img src="assets/laurels/12-red-movie-awards.webp" alt="RED Movie Awards — Selección Oficial 2027">
+          <img src="assets/laurels/13-ierapetra-documentary-festival.webp" alt="13th International Documentary Festival of Ierapetra &amp; Awards — Selección Oficial 2026">
+          <img src="assets/laurels/14-madonie-film-festival.webp" alt="Madonie Film Festival, Region of Sicily — Selección Oficial 2027">
+          <img src="assets/laurels/15-contra-el-silencio.webp" alt="Contra el Silencio Todas las Voces — Mención Honorífica 2026">
+          <img src="assets/laurels/16-matera-film-festival.webp" alt="Matera International Film Festival (MATIFF) — Selección Oficial 2026">
+          <img src="assets/laurels/17-sydney-lift-off.webp" alt="Lift-Off Global Network Sídney — Selección Oficial 2026">
+          <img src="assets/laurels/18-the-north-film-festival.webp" alt="The North Film Festival Madrid — Selección Oficial 2027">
+          <img src="assets/laurels/19-21-docsmx.webp" alt="21 DOCSMX — Selección Oficial 2026">
+          <img src="assets/laurels/20-amsterdam-lift-off.webp" alt="Lift-Off Global Network Ámsterdam — Selección Oficial 2026">
+          <img src="assets/laurels/21-kashi-indian-film-festival.webp" alt="Kashi Indian International Film Festival Awards (KIIFFA) — Selección Oficial 2026">
         </div>
 
       </div><!-- /.hero-content -->
@@ -166,7 +213,7 @@
       <!-- Mini-hero S1 verde -->
       <div class="mh-wrap s1-mh-wrap">
         <div class="section-mini-hero">
-          <video style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none" src="assets/s1-mini-hero.mp4?v=2" autoplay muted loop playsinline aria-hidden="true"></video>
+          <video style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none" src="assets/s1-mini-hero.mp4?v=2" class="mh-video" preload="none" muted loop playsinline aria-hidden="true"></video>
           <div class="mh-overlay s1-overlay"></div>
         </div>
         <div class="mh-card s1-hero-card">
@@ -180,8 +227,8 @@
           </div>
           <div class="mh-card-bottom">
             <div class="mh-card-divider"></div>
-            <p class="mh-card-desc lang-es">Un viaje por comunidades que imaginan un futuro más justo, transparente y colaborativo. Un futuro en el que los sistemas financieros sean construidos por la comunidad, para la comunidad.</p>
-            <p class="mh-card-desc lang-en">A journey through communities imagining a more just, transparent and collaborative future. One where financial systems are built by the community, for the community.</p>
+            <p class="mh-card-desc lang-es">Un programador alemán y una activista mixteca desafían al sistema financiero creando herramientas financieras para los pueblos excluidos, enfrentando no solo la desigualdad histórica, sino también la amenaza de ser silenciados por quienes ejercen el poder.</p>
+            <p class="mh-card-desc lang-en">A German programmer and a Mixtec activist collaborate to confront centuries of economic exclusion, creating open-source financial tools that empower Indigenous and marginalized communities while defying entrenched systems of power.</p>
             <div class="mh-card-scroll">
               <div class="scroll-mouse"></div>
               <span class="lang-es">Scroll</span>
@@ -196,7 +243,8 @@
         <!-- Trailer video -->
         <div class="s1-video-wrap reveal">
           <button class="video-poster" type="button" aria-label="Reproducir el tráiler" data-video-file="trailer-web-25mb.mp4">
-            <img src="assets/trailer-poster.jpg" alt="" loading="lazy">
+            <img class="lang-es" src="assets/trailer-cover-es.webp" alt="" loading="lazy">
+            <img class="lang-en" src="assets/trailer-cover-en.webp" alt="" loading="lazy">
             <span class="video-poster-play"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M15.562 8.1L3.87.225C3.06-.324 2 .249 2 1.125v15.75c0 .876 1.06 1.449 1.87.9L15.562 9.9c.585-.396.585-1.404 0-1.8z" fill="currentColor"/></svg></span>
           </button>
         </div>
@@ -204,14 +252,10 @@
         <!-- Editorial: synopsis + featured articles -->
         <div class="s1-editorial reveal">
           <div class="s1-synopsis">
-            <p class="lang-es">En las montañas de Oaxaca, comunidades indígenas llevan décadas construyendo sus propias instituciones financieras. Ahora, con una tecnología de código abierto llamada Interledger Protocol, algo ha cambiado.</p>
-            <p class="lang-en">In the mountains of Oaxaca, indigenous communities have spent decades building their own financial institutions. Now, with an open-source technology called the Interledger Protocol, something has changed.</p>
-            <p class="lang-es">El código de la gente sigue a mujeres y hombres que nunca tuvieron una cuenta bancaria mientras aprenden a usar una infraestructura financiera diseñada, por primera vez, para ellas.</p>
-            <p class="lang-en">The People's Code follows women and men who never had a bank account as they learn to use a financial infrastructure designed, for the first time, for them.</p>
-            <p class="lang-es">Es también la historia de los arquitectos de ese sistema: tecnólogos, economistas y activistas que creen que el dinero puede funcionar de otra manera. Que las reglas del dinero no son naturales. Que pueden reescribirse.</p>
-            <p class="lang-en">It is also the story of the architects of that system: technologists, economists and activists who believe money can work differently. That the rules of money are not natural. That they can be rewritten.</p>
-            <p class="lang-es">Un documental sobre soberanía financiera, identidad y tecnología. Sobre quién escribe las reglas del dinero, y quién las reescribe para que todo funcione mejor.</p>
-            <p class="lang-en">A documentary about financial sovereignty, identity and technology. About who writes the rules of money, and who is rewriting them to work better for everyone.</p>
+            <p class="lang-es">Ambientada en México, El Código de la Gente sigue la alianza inesperada entre un visionario programador alemán y una activista mixteca que se unen para desafiar siglos de exclusión económica. De su colaboración nacen herramientas financieras de código abierto creadas para dar mayor autonomía a comunidades indígenas y marginadas, como alternativa a sistemas que durante décadas se han beneficiado de mantenerlas aisladas.</p>
+            <p class="lang-en">Set in Mexico, The People’s Code follows the unexpected partnership between a visionary German programmer and a Mixtec activist who come together to confront centuries of economic exclusion. Their collaboration gives rise to open-source financial tools designed to empower Indigenous and marginalized communities, offering an alternative to the systems that have long profited from their isolation.</p>
+            <p class="lang-es">A medida que su trabajo se extiende por territorios indígenas, surgen nuevas posibilidades, pero también nuevas tensiones. Lo que comenzó como un esfuerzo por crear herramientas financieras alternativas va revelando una lucha más profunda por el acceso, la autonomía y el derecho de las comunidades a transformar los sistemas que durante tanto tiempo las han mantenido al margen.</p>
+            <p class="lang-en">As their work expands across Indigenous territories, new possibilities—and new tensions—begin to emerge. What started as an effort to build alternative financial tools gradually reveals a broader struggle over access, autonomy, and the right of communities to reshape the systems that have long kept them on the margins.</p>
           </div>
         </div>
 
@@ -223,7 +267,7 @@
         <!-- Articles row -->
         <div class="s1-articles-row reveal">
           <div class="article-card" data-article="0" onclick="openArticle(0)" role="button" tabindex="0" aria-haspopup="dialog">
-            <img class="article-card-img" src="assets/article-1-milenio.jpg" alt="" loading="lazy">
+            <img class="article-card-img" src="assets/article-1-milenio.webp" alt="" loading="lazy">
             <div class="article-card-body">
               <div class="article-card-source">MILENIO</div>
               <div class="article-card-title lang-es">Del colchón al celular: una nueva red para conectar a los microbancos</div>
@@ -231,7 +275,7 @@
             </div>
           </div>
           <div class="article-card" data-article="1" onclick="openArticle(1)" role="button" tabindex="0" aria-haspopup="dialog">
-            <img class="article-card-img" src="assets/article-2-envio-dinero.jpg" alt="" loading="lazy">
+            <img class="article-card-img" src="assets/article-2-envio-dinero.webp" alt="" loading="lazy">
             <div class="article-card-body">
               <div class="article-card-source">EL ECONOMISTA</div>
               <div class="article-card-title lang-es">Conectar la banca comunitaria con el sistema de pagos de México</div>
@@ -239,7 +283,7 @@
             </div>
           </div>
           <div class="article-card" data-article="2" onclick="openArticle(2)" role="button" tabindex="0" aria-haspopup="dialog">
-            <img class="article-card-img" src="assets/article-3-dplnews.jpg" alt="" loading="lazy">
+            <img class="article-card-img" src="assets/article-3-dplnews.webp" alt="" loading="lazy">
             <div class="article-card-body">
               <div class="article-card-source">DPL NEWS</div>
               <div class="article-card-title lang-es">Remesas más rápidas y accesibles para las comunidades rurales</div>
@@ -247,7 +291,7 @@
             </div>
           </div>
           <div class="article-card" data-article="3" onclick="openArticle(3)" role="button" tabindex="0" aria-haspopup="dialog">
-            <img class="article-card-img" src="assets/article-4-globaltreasurer.jpg" alt="" loading="lazy">
+            <img class="article-card-img" src="assets/article-4-globaltreasurer.webp" alt="" loading="lazy">
             <div class="article-card-body">
               <div class="article-card-source">THE GLOBAL TREASURER</div>
               <div class="article-card-title lang-es">Convertir las remesas en oportunidades para la economía local</div>
@@ -255,7 +299,7 @@
             </div>
           </div>
           <div class="article-card" data-article="4" onclick="openArticle(4)" role="button" tabindex="0" aria-haspopup="dialog">
-            <img class="article-card-img" src="assets/article-5-thebanker.jpg" alt="" loading="lazy">
+            <img class="article-card-img" src="assets/article-5-thebanker.webp" alt="" loading="lazy">
             <div class="article-card-body">
               <div class="article-card-source">THE BANKER</div>
               <div class="article-card-title lang-es">Una nueva vía de pagos entre Estados Unidos y el México rural</div>
@@ -268,72 +312,29 @@
     </div><!-- /.flow-art-container -->
   </section>
 
-  <!-- ARTICLE MODAL -->
-  <div class="article-modal-backdrop" id="articleModalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="article-modal-wrap">
-      <button class="article-modal-close" id="modalClose" aria-label="Cerrar">✕</button>
-      <div class="article-modal">
-        <img class="article-modal-img" id="modalImg" src="" alt="">
-        <div class="article-modal-body">
-          <div class="article-modal-source" id="modalSource"></div>
-          <h3 class="article-modal-title" id="modalTitle"></h3>
-          <div class="article-modal-text" id="modalText"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- VIDEO MODAL -->
-  <div class="video-modal-backdrop" id="crewVideoBackdrop" role="dialog" aria-modal="true" aria-label="Vídeo">
-    <div class="video-modal-wrap">
-      <button class="article-modal-close" id="crewVideoClose" aria-label="Cerrar">✕</button>
-      <div class="video-modal-frame" id="crewVideoFrame"></div>
-    </div>
-  </div>
-
-  <!-- GALLERY LIGHTBOX -->
-  <div class="gallery-lightbox-backdrop" id="galleryLightboxBackdrop" role="dialog" aria-modal="true" aria-label="Galería de rodaje">
-    <button class="article-modal-close gallery-lightbox-close" id="galleryLightboxClose" aria-label="Cerrar">✕</button>
-    <div class="gallery-lightbox-main" id="galleryLightboxMain">
-      <button class="gallery-lightbox-nav gallery-lightbox-prev" id="galleryLightboxPrev" aria-label="Anterior">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
-      </button>
-      <button class="gallery-lightbox-nav gallery-lightbox-next" id="galleryLightboxNext" aria-label="Siguiente">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
-      <div class="gallery-lightbox-stage" id="galleryLightboxStage">
-        <img class="gallery-lightbox-img" id="galleryLightboxImg" src="" alt="">
-      </div>
-    </div>
-    <div class="gallery-lightbox-footer">
-      <div class="gallery-lightbox-counter" id="galleryLightboxCounter" aria-hidden="true"></div>
-      <div class="gallery-lightbox-thumbs" id="galleryLightboxThumbs" aria-label="Miniaturas"></div>
-    </div>
-  </div>
-
-  <!-- S2: LAS PERSONAS DETRÁS DEL CÓDIGO -->
+  <!-- S2: LA TECNOLOGÍA -->
   <section class="section-s2" id="s2" data-flow-section>
     <div class="flow-art-container">
 
       <!-- Mini-hero S2 -->
       <div class="mh-wrap s2-mh-wrap">
         <div class="section-mini-hero">
-          <video style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none" src="assets/s2-mini-hero.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
+          <video style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none" src="assets/s4-mini-hero.mp4" class="mh-video" preload="none" muted loop playsinline aria-hidden="true"></video>
           <div class="mh-overlay s2-overlay"></div>
         </div>
         <div class="mh-card s2-hero-card">
           <div class="mh-card-top">
-            <span class="mh-card-tag lang-es">02– Los protagonistas</span>
-            <span class="mh-card-tag lang-en">02– The people</span>
+            <span class="mh-card-tag lang-es">02– La infraestructura</span>
+            <span class="mh-card-tag lang-en">02– The infrastructure</span>
             <h2 class="mh-card-title">
-              <span class="lang-es">Las personas<br>detrás<br>del <span class="mh-scramble">código</span></span>
-              <span class="lang-en">The people<br>behind<br>the <span class="mh-scramble">code</span></span>
+              <span class="lang-es">La<br><span class="mh-scramble">tecnología</span></span>
+              <span class="lang-en">The<br><span class="mh-scramble">technology</span></span>
             </h2>
           </div>
           <div class="mh-card-bottom">
             <div class="mh-card-divider"></div>
-            <p class="mh-card-desc lang-es">Cuando los sueños se entrelazan, surge una fuerza capaz de transformar el mundo. Un mundo en el que los sistemas se adapten a las personas, y no sean las personas quienes tengan que adaptarse a los sistemas.</p>
-            <p class="mh-card-desc lang-en">When dreams intertwine, a force emerges capable of transforming the world. A world where systems adapt to people not where people have to adapt to systems.</p>
+            <p class="mh-card-desc lang-es">El Código de la Gente parte de una pregunta sencilla, pero urgente: <strong>¿quién escribe las reglas del dinero?</strong></p>
+            <p class="mh-card-desc lang-en">The People’s Code begins with a simple but urgent question: <strong>who writes the rules of money?</strong></p>
             <div class="mh-card-scroll">
               <div class="scroll-mouse"></div>
               <span class="lang-es">Scroll</span>
@@ -345,7 +346,87 @@
 
       <div class="container section-body">
 
-        <div class="s3-crew-wrap reveal" id="collaboradoresWrap">
+        <div class="s2-intro reveal">
+          <p class="lang-es"><strong>El Código de la Gente</strong> nació de nuestro interés compartido por explorar la intersección entre la tecnología, la justicia social y el acceso económico en territorios marginados. Como productoras, nos atrajo especialmente la colaboración entre especialistas en tecnología y organizaciones indígenas que trabajan para replantear desde sus cimientos la infraestructura financiera.</p>
+          <p class="lang-en"><strong>The People’s Code</strong> emerged from our shared interest in exploring how technology intersects with social justice and economic access in marginalized territories. As producers, we were drawn to the collaboration between technologists and Indigenous organizers working to reimagine financial infrastructure from the ground up.</p>
+          <p class="lang-es">Desarrollado con el apoyo de Interledger Foundation, el proyecto nos permitió acompañar iniciativas que se desarrollan en distintos puntos de México, donde convergen las tecnologías abiertas, el conocimiento comunitario y la organización colectiva. Nuestro objetivo no era únicamente documentar un movimiento tecnológico innovador —capaz de transformar de manera profunda la forma en que las remesas circulan entre Estados Unidos y México, permitiendo que las familias reciban el dinero directamente, sin intermediarios—, sino también capturar las historias humanas y las perspectivas culturales que le dan forma.</p>
+          <p class="lang-en">Developed with the support of the Interledger Foundation, the project allowed us to follow initiatives unfolding across Mexico, where open technologies, community knowledge, and collective organization converge. Our goal was not only to document an innovative technological movement—one that could fundamentally reshape how remittances flow between the United States and Mexico, allowing families to receive money directly, without intermediaries—but also to capture the human stories and cultural perspectives shaping it.</p>
+        </div>
+
+        <div class="s2-grid reveal">
+          <div class="s2-card">
+            <div class="s2-card-kicker">01</div>
+            <h3 class="s2-card-title">Interledger Protocol</h3>
+            <p class="s2-card-text lang-es">Un protocolo abierto y neutral para transferir dinero, inspirado en TCP/IP. Envía «paquetes» de valor a través de libros contables distintos y dirige cada pago entre redes financieras como si fuera tráfico de internet.</p>
+            <p class="s2-card-text lang-en">An open, neutral protocol for transferring money, modeled on TCP/IP. It sends "packets" of value across different ledgers and directs each payment between financial networks much like internet traffic.</p>
+          </div>
+          <div class="s2-card">
+            <div class="s2-card-kicker">02</div>
+            <h3 class="s2-card-title">Open Payments</h3>
+            <p class="s2-card-text lang-es">Un estándar de API abierto que las entidades que custodian cuentas pueden implementar para que crear y completar pagos sea interoperable entre proveedores y casos de uso distintos.</p>
+            <p class="s2-card-text lang-en">An open API standard that account-servicing entities can implement so that setting up and completing payments works across different providers and use cases.</p>
+          </div>
+          <div class="s2-card">
+            <div class="s2-card-kicker">03</div>
+            <h3 class="s2-card-title lang-es">Estándares sin dueño</h3>
+            <h3 class="s2-card-title lang-en">Standards with no owner</h3>
+            <p class="s2-card-text lang-es">Un estándar solo sigue siendo abierto si quien lo mantiene no tiene motivos para cerrarlo. La Fundación Interledger no tiene participación comercial en él: sin comisiones, sin inversores.</p>
+            <p class="s2-card-text lang-en">A standard only stays open if the organization behind it has no reason to close it. The Interledger Foundation holds no commercial stake in it: no fees, no investors.</p>
+          </div>
+        </div>
+
+        <div class="s2-outro reveal">
+          <p class="lang-es">La Fundación Interledger es un conjunto de tecnologías gratuitas y de código abierto, una fundación global sin ánimo de lucro que trabaja junto a personas y organizaciones para construir sistemas financieros más justos.</p>
+          <p class="lang-en">The Interledger Foundation is a set of free, open-source technologies, a global non-profit that works alongside people and organizations to build fairer financial systems.</p>
+          <p class="lang-es">Conecta con la Fundación Interledger para saber más sobre tecnologías financieras abiertas e interoperables que conectan a los bancos comunitarios.</p>
+          <p class="lang-en">Connect with the Interledger Foundation to learn more about open, interoperable financial technologies that link community banks.</p>
+        </div>
+
+        <a class="s2-link reveal" href="https://interledger.org/" target="_blank" rel="noopener">
+          <span class="lang-es">Más información en interledger.org</span>
+          <span class="lang-en">Learn more at interledger.org</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+
+      </div><!-- /.container -->
+    </div><!-- /.flow-art-container -->
+  </section>
+
+  <!-- S3: LAS PERSONAS DETRÁS DEL CÓDIGO -->
+  <section class="section-s3" id="s3" data-flow-section>
+    <div class="flow-art-container">
+
+      <!-- Mini-hero S3 -->
+      <div class="mh-wrap s3-mh-wrap">
+        <div class="section-mini-hero">
+          <video style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none" src="assets/s2-mini-hero.mp4" class="mh-video" preload="none" muted loop playsinline aria-hidden="true"></video>
+          <div class="mh-overlay s3-overlay"></div>
+        </div>
+        <div class="mh-card s3-hero-card">
+          <div class="mh-card-top">
+            <span class="mh-card-tag lang-es">03– Los protagonistas</span>
+            <span class="mh-card-tag lang-en">03– The people</span>
+            <h2 class="mh-card-title">
+              <span class="lang-es">Las personas<br>detrás<br>del <span class="mh-scramble">código</span></span>
+              <span class="lang-en">The people<br>behind<br>the <span class="mh-scramble">code</span></span>
+            </h2>
+          </div>
+          <div class="mh-card-bottom">
+            <div class="mh-card-divider"></div>
+            <p class="mh-card-desc lang-es">Cuando los sueños se entrelazan, surge una fuerza capaz de transformar el mundo.</p>
+            <p class="mh-card-desc lang-en">When dreams intertwine, a force emerges capable of transforming the world.</p>
+            <div class="mh-card-scroll">
+              <div class="scroll-mouse"></div>
+              <span class="lang-es">Scroll</span>
+              <span class="lang-en">Scroll</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container section-body">
+
+        <div class="s4-crew-wrap reveal" id="collaboradoresWrap">
           <div style="margin-bottom:40px">
             <div class="mh-tag" style="display:block;margin-bottom:10px">
               <span class="lang-es">Los protagonistas</span><span class="lang-en">The people</span>
@@ -357,16 +438,15 @@
           </div>
           <div class="crew-slider" id="collaboradoresSlider">
             <div class="crew-img-stack" id="collaboradoresImgStack">
-              <div class="crew-img-wrap active"   data-crew="0"><img src="assets/collaborators-imgs/alex-lakatos-portrait.jpg"       alt="Alex Lakatos"></div>
-              <div class="crew-img-wrap inactive" data-crew="1"><img src="assets/collaborators-imgs/andres-arauz-portrait.jpg"       alt="Andrés Arauz"><button class="crew-play-btn" type="button" aria-label="Reproducir vídeo de Andrés Arauz" data-video="https://player.vimeo.com/video/1224774537?h=b3a4e003ea&title=0&byline=0&portrait=0&dnt=1"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M15.562 8.1L3.87.225C3.06-.324 2 .249 2 1.125v15.75c0 .876 1.06 1.449 1.87.9L15.562 9.9c.585-.396.585-1.404 0-1.8z" fill="currentColor"/></svg></button></div>
-              <div class="crew-img-wrap inactive" data-crew="2"><img src="assets/collaborators-imgs/anna-sheard-portrait.jpg"        alt="Anna Sheard"></div>
-              <div class="crew-img-wrap inactive" data-crew="3"><img src="assets/collaborators-imgs/briana-marbury.jpg"              alt="Briana Marbury"></div>
-              <div class="crew-img-wrap inactive" data-crew="4"><img src="assets/collaborators-imgs/chris-lawrence-portrait.jpg"     alt="Chris Lawrence"></div>
-              <div class="crew-img-wrap inactive" data-crew="5"><img src="assets/collaborators-imgs/isabel-cruz-portrait.jpg"        alt="Isabel Cruz"></div>
-              <div class="crew-img-wrap inactive" data-crew="6"><img src="assets/collaborators-imgs/pedro-barreto-portrait.jpg"      alt="Pedro Barreto"></div>
-              <div class="crew-img-wrap inactive" data-crew="7"><img src="assets/collaborators-imgs/raul-hinojosa-portrait.jpg"      alt="Raúl Hinojosa"></div>
-              <div class="crew-img-wrap inactive" data-crew="8"><img src="assets/collaborators-imgs/roberto_valdovinos_portrait.jpg" alt="Roberto Valdovinos"><button class="crew-play-btn" type="button" aria-label="Reproducir vídeo de Roberto Valdovinos" data-video="https://player.vimeo.com/video/1224774536?h=00777eeee6&title=0&byline=0&portrait=0&dnt=1"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M15.562 8.1L3.87.225C3.06-.324 2 .249 2 1.125v15.75c0 .876 1.06 1.449 1.87.9L15.562 9.9c.585-.396.585-1.404 0-1.8z" fill="currentColor"/></svg></button></div>
-              <div class="crew-img-wrap inactive" data-crew="9"><img src="assets/collaborators-imgs/stefan-thomas-portrait.jpg"      alt="Stefan Thomas"></div>
+              <div class="crew-img-wrap active"   data-crew="0"><img loading="lazy" src="assets/collaborators-imgs/alex-lakatos-portrait.webp"       alt="Alex Lakatos"><button class="crew-play-btn" type="button" aria-label="Reproducir vídeo de Alex Lakatos" data-video="https://player.vimeo.com/video/1224854224?h=1ea37294f2&title=0&byline=0&portrait=0&dnt=1&quality=720p"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M15.562 8.1L3.87.225C3.06-.324 2 .249 2 1.125v15.75c0 .876 1.06 1.449 1.87.9L15.562 9.9c.585-.396.585-1.404 0-1.8z" fill="currentColor"/></svg></button></div>
+              <div class="crew-img-wrap inactive" data-crew="1"><img loading="lazy" src="assets/collaborators-imgs/andres-arauz-portrait.webp"       alt="Andrés Arauz"><button class="crew-play-btn" type="button" aria-label="Reproducir vídeo de Andrés Arauz" data-video="https://player.vimeo.com/video/1224774537?h=b3a4e003ea&title=0&byline=0&portrait=0&dnt=1&quality=720p"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M15.562 8.1L3.87.225C3.06-.324 2 .249 2 1.125v15.75c0 .876 1.06 1.449 1.87.9L15.562 9.9c.585-.396.585-1.404 0-1.8z" fill="currentColor"/></svg></button></div>
+              <div class="crew-img-wrap inactive" data-crew="2"><img loading="lazy" src="assets/collaborators-imgs/briana-marbury.webp"              alt="Briana Marbury"><button class="crew-play-btn" type="button" aria-label="Reproducir vídeo de Briana Marbury" data-video="https://player.vimeo.com/video/1224854223?h=73d753c526&title=0&byline=0&portrait=0&dnt=1&quality=720p"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M15.562 8.1L3.87.225C3.06-.324 2 .249 2 1.125v15.75c0 .876 1.06 1.449 1.87.9L15.562 9.9c.585-.396.585-1.404 0-1.8z" fill="currentColor"/></svg></button></div>
+              <!-- TODO: Chris Lawrence — pending link to his Vimeo interview. When available, add a
+                   <button class="crew-play-btn" ... data-video="https://player.vimeo.com/video/…"> like the other slides. -->
+              <div class="crew-img-wrap inactive" data-crew="3"><img loading="lazy" src="assets/collaborators-imgs/chris-lawrence-portrait.webp"     alt="Chris Lawrence"></div>
+              <div class="crew-img-wrap inactive" data-crew="4"><img loading="lazy" src="assets/collaborators-imgs/isabel-cruz-portrait.webp"        alt="Isabel Cruz"><button class="crew-play-btn" type="button" aria-label="Reproducir vídeo de Isabel Cruz" data-video="https://player.vimeo.com/video/1224854222?h=2ef7b5a7af&title=0&byline=0&portrait=0&dnt=1&quality=720p"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M15.562 8.1L3.87.225C3.06-.324 2 .249 2 1.125v15.75c0 .876 1.06 1.449 1.87.9L15.562 9.9c.585-.396.585-1.404 0-1.8z" fill="currentColor"/></svg></button></div>
+              <div class="crew-img-wrap inactive" data-crew="5"><img loading="lazy" src="assets/collaborators-imgs/roberto_valdovinos_portrait.webp" alt="Roberto Valdovinos"><button class="crew-play-btn" type="button" aria-label="Reproducir vídeo de Roberto Valdovinos" data-video="https://player.vimeo.com/video/1224774536?h=00777eeee6&title=0&byline=0&portrait=0&dnt=1&quality=720p"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M15.562 8.1L3.87.225C3.06-.324 2 .249 2 1.125v15.75c0 .876 1.06 1.449 1.87.9L15.562 9.9c.585-.396.585-1.404 0-1.8z" fill="currentColor"/></svg></button></div>
+              <div class="crew-img-wrap inactive" data-crew="6"><img loading="lazy" src="assets/collaborators-imgs/stefan-thomas-portrait.webp"      alt="Stefan Thomas"><button class="crew-play-btn" type="button" aria-label="Reproducir vídeo de Stefan Thomas" data-video="https://player.vimeo.com/video/1224854221?h=662f4212f3&title=0&byline=0&portrait=0&dnt=1&quality=720p"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M15.562 8.1L3.87.225C3.06-.324 2 .249 2 1.125v15.75c0 .876 1.06 1.449 1.87.9L15.562 9.9c.585-.396.585-1.404 0-1.8z" fill="currentColor"/></svg></button></div>
             </div>
             <div class="crew-content">
               <div class="crew-slide active" data-crew="0">
@@ -383,53 +463,33 @@
                 <div class="crew-bio lang-en">"Money is a social convention. And like all conventions, it can be rewritten. The question is who has the power to do so."</div>
               </div>
               <div class="crew-slide" data-crew="2">
-                <div class="crew-name">Anna Sheard</div>
-                <div class="crew-role">Senior Director of Communications, Interledger Foundation</div>
-                <div class="crew-bio lang-es">"Contar bien estas historias no es solo comunicación. Es parte del cambio que queremos ver."</div>
-                <div class="crew-bio lang-en">"Telling these stories well isn't just communication. It's part of the change we want to see."</div>
-              </div>
-              <div class="crew-slide" data-crew="3">
                 <div class="crew-name">Briana Marbury</div>
                 <div class="crew-role lang-es">Presidenta &amp; CEO, Interledger Foundation</div>
                 <div class="crew-role lang-en">President &amp; CEO, Interledger Foundation</div>
                 <div class="crew-bio lang-es">"La inclusión financiera no es caridad. Es justicia. Y la tecnología es el instrumento más poderoso que tenemos ahora mismo."</div>
                 <div class="crew-bio lang-en">"Financial inclusion is not charity. It's justice. And technology is the most powerful instrument we have right now."</div>
               </div>
-              <div class="crew-slide" data-crew="4">
+              <div class="crew-slide" data-crew="3">
                 <div class="crew-name">Chris Lawrence</div>
                 <div class="crew-role">Chief Program Officer, Interledger Foundation</div>
                 <div class="crew-bio lang-es">"Lo que estamos viendo en Oaxaca es una prueba de concepto viva. Un sistema financiero diseñado desde la base."</div>
                 <div class="crew-bio lang-en">"What we're seeing in Oaxaca is a living proof of concept. A financial system designed from the ground up."</div>
               </div>
-              <div class="crew-slide" data-crew="5">
+              <div class="crew-slide" data-crew="4">
                 <div class="crew-name">Isabel Cruz</div>
                 <div class="crew-role lang-es">Directora General AMUCSS · Cofundadora Cámara de la Gente</div>
                 <div class="crew-role lang-en">Executive Director AMUCSS · Co-Founder Cámara de la Gente</div>
                 <div class="crew-bio lang-es">"Las mujeres de nuestras comunidades llevan generaciones siendo las mejores gestoras de sus recursos. Solo necesitaban las herramientas adecuadas."</div>
                 <div class="crew-bio lang-en">"The women of our communities have been the best managers of their resources for generations. They just needed the right tools."</div>
               </div>
-              <div class="crew-slide" data-crew="6">
-                <div class="crew-name">Pedro Barreto</div>
-                <div class="crew-role lang-es">Integrations Specialist, Interledger Foundation · CTO Cámara de la Gente</div>
-                <div class="crew-role lang-en">Integrations Specialist, Interledger Foundation · CTO Cámara de la Gente</div>
-                <div class="crew-bio lang-es">"El reto técnico no es la tecnología. Es hacer que una cooperativa en la sierra pueda usarla sin necesitar un ingeniero."</div>
-                <div class="crew-bio lang-en">"The technical challenge isn't the technology. It's making a cooperative in the mountains able to use it without needing an engineer."</div>
-              </div>
-              <div class="crew-slide" data-crew="7">
-                <div class="crew-name">Raúl Hinojosa</div>
-                <div class="crew-role lang-es">Chair, Dpto. Estudios Chicanos/as y Centroamericanos, UCLA</div>
-                <div class="crew-role lang-en">Chair, César E. Chávez Dept. of Chicana/o &amp; Central American Studies, UCLA</div>
-                <div class="crew-bio lang-es">"Las remesas son el sistema financiero más grande que nadie diseñó. Entenderlo es entender el poder de las comunidades migrantes."</div>
-                <div class="crew-bio lang-en">"Remittances are the largest financial system nobody designed. Understanding it means understanding the power of migrant communities."</div>
-              </div>
-              <div class="crew-slide" data-crew="8">
+              <div class="crew-slide" data-crew="5">
                 <div class="crew-name">Roberto Valdovinos</div>
                 <div class="crew-role lang-es">Cofundador, Cámara de la Gente</div>
                 <div class="crew-role lang-en">Co-Founder, Cámara de la Gente</div>
                 <div class="crew-bio lang-es">"Empezamos con la convicción de que la tecnología podía servir a quien más la necesita. Oaxaca nos demostró que teníamos razón."</div>
                 <div class="crew-bio lang-en">"We started with the conviction that technology could serve those who need it most. Oaxaca proved us right."</div>
               </div>
-              <div class="crew-slide" data-crew="9">
+              <div class="crew-slide" data-crew="6">
                 <div class="crew-name">Stefan Thomas</div>
                 <div class="crew-role lang-es">Chairperson, Interledger Foundation · Co-Creador del Interledger Protocol</div>
                 <div class="crew-role lang-en">Chairperson, Interledger Foundation · Co-Creator of the Interledger Protocol</div>
@@ -439,7 +499,7 @@
               <div class="crew-controls">
                 <button class="crew-btn" id="collaboradoresPrev" aria-label="Anterior"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
                 <button class="crew-btn" id="collaboradoresNext" aria-label="Siguiente"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
-                <span class="crew-counter"><span id="collaboradoresCurrent">1</span> / <span id="collaboradoresTotal">10</span></span>
+                <span class="crew-counter"><span id="collaboradoresCurrent">1</span> / <span id="collaboradoresTotal">7</span></span>
               </div>
             </div>
           </div>
@@ -453,7 +513,8 @@
               <span class="lang-en">Festival journey</span>
             </div>
             <h3 style="font-family:var(--font-display);font-size:clamp(24px,3vw,40px);font-weight:800;letter-spacing:-0.02em;color:#111;margin-bottom:0">
-              Festival Journey
+              <span class="lang-es">Trayectoria en festivales</span>
+              <span class="lang-en">Festival Journey</span>
             </h3>
           </div>
           <div class="festival-grid">
@@ -487,11 +548,11 @@
 
             <div class="festival-item">
               <div class="festival-item-year">6 Abr 2026</div>
-              <div class="festival-item-name">New York International Film Festival</div>
+              <div class="festival-item-name">New York International Film Awards</div>
               <div class="festival-item-award lang-es">Ganadora de premio mensual · competición anual final</div>
               <div class="festival-item-award lang-en">Monthly award winner · final annual competition</div>
               <div class="festival-item-location">Nueva York, EE. UU.</div>
-              <a class="festival-item-link" href="https://www.filmlinc.org/nyff/" target="_blank" rel="noopener"><span class="lang-es">Sitio web ↗</span><span class="lang-en">Website ↗</span></a>
+              <a class="festival-item-link" href="https://newyorkinternationalfilmawards.com/" target="_blank" rel="noopener"><span class="lang-es">Sitio web ↗</span><span class="lang-en">Website ↗</span></a>
             </div>
 
             <div class="festival-item">
@@ -540,6 +601,15 @@
             </div>
 
             <div class="festival-item">
+              <div class="festival-item-year">25 Abr 2026</div>
+              <div class="festival-item-name">Sweden Film Awards</div>
+              <div class="festival-item-award lang-es">Seleccionada a competición</div>
+              <div class="festival-item-award lang-en">Selected for competition</div>
+              <div class="festival-item-location">Estocolmo, Suecia</div>
+              <a class="festival-item-link" href="https://swedenfilmawards.se/" target="_blank" rel="noopener"><span class="lang-es">Sitio web ↗</span><span class="lang-en">Website ↗</span></a>
+            </div>
+
+            <div class="festival-item">
               <div class="festival-item-year">20 May 2026</div>
               <div class="festival-item-name">Los Angeles Movie Awards</div>
               <div class="festival-item-award lang-es">Finalista</div>
@@ -578,10 +648,19 @@
             <div class="festival-item">
               <div class="festival-item-year">3 Ago 2026</div>
               <div class="festival-item-name">Contra el Silencio Todas las Voces</div>
-              <div class="festival-item-award lang-es">Seleccionada a competición</div>
-              <div class="festival-item-award lang-en">Selected for competition</div>
+              <div class="festival-item-award lang-es">Mención de honor · seleccionada a competición</div>
+              <div class="festival-item-award lang-en">Honorable Mention · selected for competition</div>
               <div class="festival-item-location">Ciudad de México, México</div>
               <a class="festival-item-link" href="https://vocescontraelsilencio.org/" target="_blank" rel="noopener"><span class="lang-es">Sitio web ↗</span><span class="lang-en">Website ↗</span></a>
+            </div>
+
+            <div class="festival-item">
+              <div class="festival-item-year">10 Ago 2026</div>
+              <div class="festival-item-name">Matera International Film Festival</div>
+              <div class="festival-item-award lang-es">Semifinalista · seleccionada a competición</div>
+              <div class="festival-item-award lang-en">Semi-finalist · selected for competition</div>
+              <div class="festival-item-location">Matera, Italia</div>
+              <a class="festival-item-link" href="https://www.matiff.it/" target="_blank" rel="noopener"><span class="lang-es">Sitio web ↗</span><span class="lang-en">Website ↗</span></a>
             </div>
 
             <div class="festival-item">
@@ -590,7 +669,7 @@
               <div class="festival-item-award lang-es">Seleccionada a competición</div>
               <div class="festival-item-award lang-en">Selected for competition</div>
               <div class="festival-item-location">Sídney, Australia</div>
-              <a class="festival-item-link" href="https://liftoff.network/" target="_blank" rel="noopener"><span class="lang-es">Sitio web ↗</span><span class="lang-en">Website ↗</span></a>
+              <a class="festival-item-link" href="https://liftoff.network/sydney-lift-off-film-festival/" target="_blank" rel="noopener"><span class="lang-es">Sitio web ↗</span><span class="lang-en">Website ↗</span></a>
             </div>
 
             <div class="festival-item">
@@ -611,6 +690,24 @@
               <a class="festival-item-link" href="https://docsmx.org/" target="_blank" rel="noopener"><span class="lang-es">Sitio web ↗</span><span class="lang-en">Website ↗</span></a>
             </div>
 
+            <div class="festival-item">
+              <div class="festival-item-year">17 Sep 2026</div>
+              <div class="festival-item-name">Amsterdam Lift-Off Film Festival</div>
+              <div class="festival-item-award lang-es">Seleccionada a competición</div>
+              <div class="festival-item-award lang-en">Selected for competition</div>
+              <div class="festival-item-location">Ámsterdam, Países Bajos</div>
+              <a class="festival-item-link" href="https://liftoff.network/amsterdam-lift-off-film-festival/" target="_blank" rel="noopener"><span class="lang-es">Sitio web ↗</span><span class="lang-en">Website ↗</span></a>
+            </div>
+
+            <div class="festival-item">
+              <div class="festival-item-year">1 Oct 2026</div>
+              <div class="festival-item-name">Kashi Indian International Film Festival Awards (KIIFFA)</div>
+              <div class="festival-item-award lang-es">Seleccionada a competición</div>
+              <div class="festival-item-award lang-en">Selected for competition</div>
+              <div class="festival-item-location">Bombay, India</div>
+              <a class="festival-item-link" href="https://www.kiiffa.com/" target="_blank" rel="noopener"><span class="lang-es">Sitio web ↗</span><span class="lang-en">Website ↗</span></a>
+            </div>
+
           </div>
         </div>
 
@@ -618,97 +715,17 @@
     </div><!-- /.flow-art-container -->
   </section>
 
-  <!-- S4: LA TECNOLOGÍA -->
+  <!-- S4: DETRÁS DE LAS CÁMARAS -->
   <section class="section-s4" id="s4" data-flow-section>
     <div class="flow-art-container">
 
       <!-- Mini-hero S4 -->
       <div class="mh-wrap s4-mh-wrap">
         <div class="section-mini-hero">
-          <video style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none" src="assets/s4-mini-hero.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
+          <video style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none" src="assets/s3-mini-hero.mp4?v=2" class="mh-video" preload="none" muted loop playsinline aria-hidden="true"></video>
           <div class="mh-overlay s4-overlay"></div>
         </div>
         <div class="mh-card s4-hero-card">
-          <div class="mh-card-top">
-            <span class="mh-card-tag lang-es">03– La infraestructura</span>
-            <span class="mh-card-tag lang-en">03– The infrastructure</span>
-            <h2 class="mh-card-title">
-              <span class="lang-es">La<br><span class="mh-scramble">tecnología</span></span>
-              <span class="lang-en">The<br><span class="mh-scramble">technology</span></span>
-            </h2>
-          </div>
-          <div class="mh-card-bottom">
-            <div class="mh-card-divider"></div>
-            <p class="mh-card-desc lang-es">Reescribir las reglas que mueven el dinero: infraestructura abierta para que los sistemas financieros se conecten una vez y funcionen con todos.</p>
-            <p class="mh-card-desc lang-en">Rewriting the rules that move money: open infrastructure so financial systems connect once and work with many.</p>
-            <div class="mh-card-scroll">
-              <div class="scroll-mouse"></div>
-              <span class="lang-es">Scroll</span>
-              <span class="lang-en">Scroll</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container section-body">
-
-        <div class="s4-intro reveal">
-          <p class="lang-es">El documental gira en torno a una infraestructura de pagos abierta impulsada por la Interledger Foundation. Su punto de partida: el dinero funciona hoy sobre sistemas que nunca fueron diseñados para entenderse entre sí, cada uno con sus propias reglas y formatos. El resultado son costes altos, opciones limitadas y más de mil millones de personas sin acceso.</p>
-          <p class="lang-en">The documentary revolves around an open payments infrastructure driven by the Interledger Foundation. Its starting point: today money runs on systems that were never designed to work together, each with its own rules and formats. The result is high costs, limited options, and over a billion people left without access.</p>
-          <p class="lang-es">La idea es sencilla: que el dinero se mueva igual que la información — de forma fiable, entre sistemas distintos y con un único conjunto de reglas. Sin pedir permiso en el centro y sin reconstruir la conexión para cada nuevo socio.</p>
-          <p class="lang-en">The idea is simple: money should move the way information does — reliably, across different systems, using one set of rules. No permission required at the center, and no rebuilding the connection for every new partner.</p>
-        </div>
-
-        <div class="s4-grid reveal">
-          <div class="s4-card">
-            <div class="s4-card-kicker">01</div>
-            <h3 class="s4-card-title">Interledger Protocol</h3>
-            <p class="s4-card-text lang-es">Un protocolo abierto y neutral para transferir dinero, inspirado en TCP/IP. Envía «paquetes» de valor a través de libros contables distintos y enruta cada pago entre redes financieras como si fuera tráfico de internet.</p>
-            <p class="s4-card-text lang-en">An open, neutral protocol for transferring money, modeled on TCP/IP. It sends "packets" of value across different ledgers and routes each payment between financial networks much like internet traffic.</p>
-          </div>
-          <div class="s4-card">
-            <div class="s4-card-kicker">02</div>
-            <h3 class="s4-card-title">Open Payments</h3>
-            <p class="s4-card-text lang-es">Un estándar de API abierto que las entidades que custodian cuentas pueden implementar para que crear y completar pagos sea interoperable entre proveedores y casos de uso distintos.</p>
-            <p class="s4-card-text lang-en">An open API standard that account-servicing entities can implement so that setting up and completing payments works across different providers and use cases.</p>
-          </div>
-          <div class="s4-card">
-            <div class="s4-card-kicker">03</div>
-            <h3 class="s4-card-title lang-es">Estándares sin dueño</h3>
-            <h3 class="s4-card-title lang-en">Standards with no owner</h3>
-            <p class="s4-card-text lang-es">Un estándar solo sigue siendo abierto si quien lo mantiene no tiene motivos para cerrarlo. La Interledger Foundation no tiene participación comercial en él: sin comisiones, sin inversores.</p>
-            <p class="s4-card-text lang-en">A standard only stays open if the organization behind it has no reason to close it. The Interledger Foundation holds no commercial stake in it: no fees, no investors.</p>
-          </div>
-        </div>
-
-        <div class="s4-outro reveal">
-          <p class="lang-es">Interledger es un conjunto de tecnologías gratuitas y de código abierto impulsado por la Interledger Foundation, una fundación global sin ánimo de lucro que trabaja junto a personas y organizaciones para construir sistemas financieros más justos.</p>
-          <p class="lang-en">Interledger is a set of free, open-source technologies driven by the Interledger Foundation, a global non-profit that works alongside people and organizations to build fairer financial systems.</p>
-          <p class="lang-es">Conecta con Interledger Foundation para saber más sobre tecnologías financieras abiertas e interoperables que conectan a los bancos comunitarios.</p>
-          <p class="lang-en">Connect with the Interledger Foundation to learn more about open, interoperable financial technologies that link community banks.</p>
-        </div>
-
-        <a class="s4-link reveal" href="https://interledger.org/" target="_blank" rel="noopener">
-          <span class="lang-es">Más información en interledger.org</span>
-          <span class="lang-en">Learn more at interledger.org</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-        </a>
-
-      </div><!-- /.container -->
-    </div><!-- /.flow-art-container -->
-  </section>
-
-  <!-- S3: DETRÁS DE LAS CÁMARAS -->
-  <section class="section-s3" id="s3" data-flow-section>
-    <div class="flow-art-container">
-
-      <!-- Mini-hero S3 -->
-      <div class="mh-wrap s3-mh-wrap">
-        <div class="section-mini-hero">
-          <video style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none" src="assets/s3-mini-hero.mp4?v=2" autoplay muted loop playsinline aria-hidden="true"></video>
-          <div class="mh-overlay s3-overlay"></div>
-        </div>
-        <div class="mh-card s3-hero-card">
           <div class="mh-card-top">
             <span class="mh-card-tag lang-es">04– El proceso</span>
             <span class="mh-card-tag lang-en">04– The process</span>
@@ -719,8 +736,8 @@
           </div>
           <div class="mh-card-bottom">
             <div class="mh-card-divider"></div>
-            <p class="mh-card-desc lang-es">El proceso creativo detrás de la historia: cámaras, decisiones y la magia de las comunidades.</p>
-            <p class="mh-card-desc lang-en">The creative process behind the story: cameras, decisions and the magic of communities.</p>
+            <p class="mh-card-desc lang-es">El proceso creativo detrás de la historia: la magia de las comunidades.</p>
+            <p class="mh-card-desc lang-en">The creative process behind the story: the magic of communities.</p>
             <div class="mh-card-scroll">
               <div class="scroll-mouse"></div>
               <span class="lang-es">Scroll</span>
@@ -732,37 +749,37 @@
 
       <div class="container section-body">
 
-        <!-- Making-of video — pending delivery. TEMPORARY: plays the trailer until making-of.mp4
-             arrives in the project root; then change data-video-file below to "making-of.mp4". -->
-        <div class="s3-video-wrap reveal">
-          <button class="video-poster" type="button" aria-label="Reproducir el making-of" data-video-file="trailer-web-25mb.mp4">
-            <img src="assets/s3-video-poster.jpg" alt="" loading="lazy">
+        <!-- Making-of video: 1080p, ~1.5 Mbps H.264 — same encode settings as the trailer -->
+        <div class="s4-video-wrap reveal">
+          <button class="video-poster" type="button" aria-label="Reproducir el making-of" data-video-file="making-of.mp4">
+            <img class="lang-es" src="assets/bts-video-cover-es.webp" alt="" loading="lazy">
+            <img class="lang-en" src="assets/bts-video-cover-en.webp" alt="" loading="lazy">
             <span class="video-poster-play"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M15.562 8.1L3.87.225C3.06-.324 2 .249 2 1.125v15.75c0 .876 1.06 1.449 1.87.9L15.562 9.9c.585-.396.585-1.404 0-1.8z" fill="currentColor"/></svg></span>
           </button>
         </div>
 
         <!-- Photo gallery -->
-        <div class="s3-gallery reveal" role="list" aria-label="Galería de rodaje">
-          <div class="s3-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-01.jpg" alt="Rodaje 1" loading="lazy"></div>
-          <div class="s3-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-02.jpg" alt="Rodaje 2" loading="lazy"></div>
-          <div class="s3-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-03.jpg" alt="Rodaje 3" loading="lazy"></div>
-          <div class="s3-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-04.jpg" alt="Rodaje 4" loading="lazy"></div>
-          <div class="s3-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-05.jpg" alt="Rodaje 5" loading="lazy"></div>
-          <div class="s3-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-06.jpg" alt="Rodaje 6" loading="lazy"></div>
-          <div class="s3-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-07.jpg" alt="Rodaje 7" loading="lazy"></div>
-          <div class="s3-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-08.jpg" alt="Rodaje 8" loading="lazy"></div>
-          <div class="s3-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-09.jpg" alt="Rodaje 9" loading="lazy"></div>
-          <div class="s3-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-10.jpg" alt="Rodaje 10" loading="lazy"></div>
-          <div class="s3-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-11.jpg" alt="Rodaje 11" loading="lazy"></div>
-          <div class="s3-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-12.jpg" alt="Rodaje 12" loading="lazy"></div>
-          <div class="s3-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-13.jpg" alt="Rodaje 13" loading="lazy"></div>
-          <div class="s3-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-14.jpg" alt="Rodaje 14" loading="lazy"></div>
-          <div class="s3-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-15.jpg" alt="Rodaje 15" loading="lazy"></div>
-          <div class="s3-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-16.jpg" alt="Rodaje 16" loading="lazy"></div>
+        <div class="s4-gallery reveal" role="list" aria-label="Galería de rodaje">
+          <div class="s4-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-01.webp" alt="Rodaje 1" loading="lazy"></div>
+          <div class="s4-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-02.webp" alt="Rodaje 2" loading="lazy"></div>
+          <div class="s4-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-03.webp" alt="Rodaje 3" loading="lazy"></div>
+          <div class="s4-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-04.webp" alt="Rodaje 4" loading="lazy"></div>
+          <div class="s4-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-05.webp" alt="Rodaje 5" loading="lazy"></div>
+          <div class="s4-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-06.webp" alt="Rodaje 6" loading="lazy"></div>
+          <div class="s4-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-07.webp" alt="Rodaje 7" loading="lazy"></div>
+          <div class="s4-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-08.webp" alt="Rodaje 8" loading="lazy"></div>
+          <div class="s4-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-09.webp" alt="Rodaje 9" loading="lazy"></div>
+          <div class="s4-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-10.webp" alt="Rodaje 10" loading="lazy"></div>
+          <div class="s4-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-11.webp" alt="Rodaje 11" loading="lazy"></div>
+          <div class="s4-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-12.webp" alt="Rodaje 12" loading="lazy"></div>
+          <div class="s4-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-13.webp" alt="Rodaje 13" loading="lazy"></div>
+          <div class="s4-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-14.webp" alt="Rodaje 14" loading="lazy"></div>
+          <div class="s4-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-15.webp" alt="Rodaje 15" loading="lazy"></div>
+          <div class="s4-gallery-item" role="listitem"><img src="assets/s3-gallery/bts-16.webp" alt="Rodaje 16" loading="lazy"></div>
         </div>
 
         <!-- Crew slider -->
-        <div class="s3-crew-wrap reveal">
+        <div class="s4-crew-wrap reveal">
           <div style="margin-bottom:40px">
             <div class="mh-tag" style="display:block;margin-bottom:10px">
               <span class="lang-es">Equipo creativo</span><span class="lang-en">Creative team</span>
@@ -774,30 +791,30 @@
           </div>
           <div class="crew-slider" id="crewSlider">
             <div class="crew-img-stack" id="crewImgStack">
-              <div class="crew-img-wrap active" data-crew="0"><img src="assets/crew-imgs/coizta-grecko-portrait.jpg" alt="Coizta Grecko B."></div>
-              <div class="crew-img-wrap inactive" data-crew="1"><img src="assets/crew-imgs/ana-paula-valdovinos-portrait.jpg" alt="Ana Paula Valdovinos"></div>
-              <div class="crew-img-wrap inactive" data-crew="2"><img src="assets/crew-imgs/vanessa-ciangherotti-portrait.jpg" alt="Vanessa Ciangherotti"></div>
-              <div class="crew-img-wrap inactive" data-crew="3"><img src="assets/crew-imgs/gabriela-retes-portrait.jpg" alt="Gabriela Retes"></div>
-              <div class="crew-img-wrap inactive" data-crew="4"><img src="assets/crew-imgs/cesar-omar-perez-portrait.jpg" alt="César Omar Pérez"></div>
+              <div class="crew-img-wrap active" data-crew="0"><img loading="lazy" src="assets/crew-imgs/ana-paula-valdovinos-portrait.webp" alt="Ana Paula Valdovinos"></div>
+              <div class="crew-img-wrap inactive" data-crew="1"><img loading="lazy" src="assets/crew-imgs/vanessa-ciangherotti-portrait.webp" alt="Vanessa Ciangherotti"></div>
+              <div class="crew-img-wrap inactive" data-crew="2"><img loading="lazy" src="assets/crew-imgs/coizta-grecko-portrait.webp" alt="Coizta Grecko B"></div>
+              <div class="crew-img-wrap inactive" data-crew="3"><img loading="lazy" src="assets/crew-imgs/gabriela-retes-portrait.webp" alt="Gabriela Retes"></div>
+              <div class="crew-img-wrap inactive" data-crew="4"><img loading="lazy" src="assets/crew-imgs/cesar-omar-perez-portrait.webp" alt="César Omar Pérez"></div>
             </div>
             <div class="crew-content">
               <div class="crew-slide active" data-crew="0">
-                <div class="crew-name">Coizta Grecko B.</div>
-                <div class="crew-role lang-es">Dirección</div><div class="crew-role lang-en">Director</div>
-                <div class="crew-bio lang-es">Directora y guionista con una mirada singular sobre las intersecciones entre tecnología, identidad y justicia social. El código de la gente es su primera incursión en el largometraje documental.</div>
-                <div class="crew-bio lang-en">Director and screenwriter with a singular perspective on the intersections of technology, identity and social justice. The People's Code is her first feature-length documentary.</div>
-              </div>
-              <div class="crew-slide" data-crew="1">
                 <div class="crew-name">Ana Paula Valdovinos</div>
                 <div class="crew-role lang-es">Producción</div><div class="crew-role lang-en">Producer</div>
                 <div class="crew-bio lang-es">Nominada dos veces al International Emmy. Ha producido para Netflix, HBO Max, Peacock y NBCUniversal. Ex Vicepresidenta de Telemundo International Studios.</div>
                 <div class="crew-bio lang-en">Two-time International Emmy nominee. Has produced for Netflix, HBO Max, Peacock and NBCUniversal. Former VP at Telemundo International Studios.</div>
               </div>
-              <div class="crew-slide" data-crew="2">
+              <div class="crew-slide" data-crew="1">
                 <div class="crew-name">Vanessa Ciangherotti</div>
                 <div class="crew-role lang-es">Producción</div><div class="crew-role lang-en">Producer</div>
-                <div class="crew-bio lang-es">Directora, guionista y actriz con más de 30 años de experiencia. Ganadora del Premio Ariel y la Diosa de Plata. Fundadora de Gantha, Creative House.</div>
-                <div class="crew-bio lang-en">Director, screenwriter and actress with over 30 years of experience. Premio Ariel and Diosa de Plata winner. Founder of Gantha, Creative House.</div>
+                <div class="crew-bio lang-es">Directora, productora, guionista y actriz con más de 30 años de experiencia. Ganadora del Premio Ariel y la Diosa de Plata. Fundadora de Gantha, Creative House.</div>
+                <div class="crew-bio lang-en">Director, producer, screenwriter and actress with over 30 years of experience. Premio Ariel and Diosa de Plata winner. Founder of Gantha, Creative House.</div>
+              </div>
+              <div class="crew-slide" data-crew="2">
+                <div class="crew-name">Coizta Grecko B</div>
+                <div class="crew-role lang-es">Dirección</div><div class="crew-role lang-en">Director</div>
+                <div class="crew-bio lang-es">Documentalista, director y productor. Su obra explora la memoria, los derechos humanos y la justicia social. Sus películas han participado en DocsMX, Biarritz Amérique Latine, La Habana, Bogocine y Viva México.</div>
+                <div class="crew-bio lang-en">Documentary filmmaker, director and producer whose work explores memory, human rights and social justice. Films by Coizta Grecko B have screened at DocsMX, Biarritz Amérique Latine, Havana, Bogocine and Viva México.</div>
               </div>
               <div class="crew-slide" data-crew="3">
                 <div class="crew-name">Gabriela Retes</div>
@@ -821,12 +838,12 @@
         </div>
 
         <!-- Form + Press Kit -->
-        <div class="s3-bottom reveal" id="contacto">
+        <div class="s4-bottom reveal" id="contacto">
           <div>
-            <div class="s3-form-title lang-es">Sigue el documental</div>
-            <div class="s3-form-title lang-en">Follow the documentary</div>
-            <div class="s3-form-sub lang-es">Recibe actualizaciones sobre proyecciones, premios y el estreno internacional.</div>
-            <div class="s3-form-sub lang-en">Receive updates on screenings, awards and the international release.</div>
+            <div class="s4-form-title lang-es">Sigue el documental</div>
+            <div class="s4-form-title lang-en">Follow the documentary</div>
+            <div class="s4-form-sub lang-es">Recibe actualizaciones sobre proyecciones, premios y el estreno internacional.</div>
+            <div class="s4-form-sub lang-en">Receive updates on screenings, awards and the international release.</div>
             <!-- Netlify Forms: submissions land in the site's Netlify dashboard.
                  Notifications for this form should be sent to contacto@gantha.mx.
                  That recipient is NOT set here — configure it in Netlify at
@@ -834,9 +851,9 @@
                  If this site is ever hosted outside Netlify, this form's
                  backend (data-netlify + the fetch('/') submit below) will need
                  to be replaced — Netlify Forms only works on Netlify. -->
-            <form class="s3-form" id="followForm" name="follow" data-netlify="true" onsubmit="handleFollowSubmit(event)" novalidate>
+            <form class="s4-form" id="followForm" name="follow" data-netlify="true" onsubmit="handleFollowSubmit(event)" novalidate>
               <input type="hidden" name="form-name" value="follow">
-              <div class="s3-form-row">
+              <div class="s4-form-row">
                 <div class="form-field">
                   <label class="form-label" for="followFirstName"><span class="lang-es">Nombre</span><span class="lang-en">First name</span></label>
                   <input class="form-input" type="text" id="followFirstName" name="firstName" required autocomplete="given-name">
@@ -871,7 +888,7 @@
             </div>
             <div>
               <div class="presskit-title">Press Kit</div>
-              <div class="presskit-desc lang-es">Sinopsis completa, declaración de la directora, notas de producción, fotogramas en alta resolución, biografías del equipo creativo y datos técnicos de distribución.</div>
+              <div class="presskit-desc lang-es">Sinopsis completa, declaración del director, notas de producción, fotogramas en alta resolución, biografías del equipo creativo y datos técnicos de distribución.</div>
               <div class="presskit-desc lang-en">Full synopsis, director's statement, producer's notes, high-resolution stills, creative team biographies and technical distribution data.</div>
             </div>
             <a class="presskit-btn" href="ThePeoplesCode_PressKit.pdf" download="ThePeoplesCode_PressKit.pdf" target="_blank" rel="noopener">
@@ -886,17 +903,62 @@
     </div><!-- /.flow-art-container -->
   </section>
 
+  </main>
+
+  <!-- ARTICLE MODAL -->
+  <div class="article-modal-backdrop" id="articleModalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="article-modal-wrap">
+      <button class="article-modal-close" id="modalClose" aria-label="Cerrar">✕</button>
+      <div class="article-modal">
+        <img class="article-modal-img" id="modalImg" src="" alt="">
+        <div class="article-modal-body">
+          <div class="article-modal-source" id="modalSource"></div>
+          <h3 class="article-modal-title" id="modalTitle">Artículo</h3>
+          <div class="article-modal-text" id="modalText"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIDEO MODAL -->
+  <div class="video-modal-backdrop" id="crewVideoBackdrop" role="dialog" aria-modal="true" aria-label="Vídeo">
+    <div class="video-modal-wrap">
+      <button class="article-modal-close" id="crewVideoClose" aria-label="Cerrar">✕</button>
+      <div class="video-modal-frame" id="crewVideoFrame"></div>
+    </div>
+  </div>
+
+  <!-- GALLERY LIGHTBOX -->
+  <div class="gallery-lightbox-backdrop" id="galleryLightboxBackdrop" role="dialog" aria-modal="true" aria-label="Galería de rodaje">
+    <button class="article-modal-close gallery-lightbox-close" id="galleryLightboxClose" aria-label="Cerrar">✕</button>
+    <div class="gallery-lightbox-main" id="galleryLightboxMain">
+      <button class="gallery-lightbox-nav gallery-lightbox-prev" id="galleryLightboxPrev" aria-label="Anterior">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="gallery-lightbox-nav gallery-lightbox-next" id="galleryLightboxNext" aria-label="Siguiente">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+      <div class="gallery-lightbox-stage" id="galleryLightboxStage">
+        <img class="gallery-lightbox-img" id="galleryLightboxImg" src="" alt="">
+      </div>
+    </div>
+    <div class="gallery-lightbox-footer">
+      <div class="gallery-lightbox-counter" id="galleryLightboxCounter" aria-hidden="true"></div>
+      <div class="gallery-lightbox-thumbs" id="galleryLightboxThumbs" aria-label="Miniaturas"></div>
+    </div>
+  </div>
+
   <!-- FOOTER: CRÉDITOS CINEMATOGRÁFICOS -->
   <footer class="footer-credits" id="footer-credits">
     <div class="container">
 
-      <div class="footer-film-title lang-es"><span class="ftl-1">El código</span><br><span class="ftl-2">de la gente</span></div>
-      <div class="footer-film-title lang-en"><span class="ftl-1">The People's</span><br><span class="ftl-2">Code</span></div>
-      <div class="footer-film-year">© 2024 · Gantha Creative House · Todos los derechos reservados</div>
+      <div class="footer-film-title lang-es"><span class="ftl-1">El Código</span><br><span class="ftl-2">de la Gente</span></div>
+      <div class="footer-film-title lang-en"><span class="ftl-1">The People’s</span><br><span class="ftl-2">Code</span></div>
+      <div class="footer-film-year">© 2026 · Gantha Creative House · <span class="lang-es">Todos los derechos reservados</span><span class="lang-en">All rights reserved</span></div>
 
       <div class="footer-producer-logo">
         <img src="assets/vap-logo.png" alt="VAP">
-        <img src="assets/gantha-logo.png" alt="Gantha Casa de Contenido">
+        <img src="assets/gantha-logo.png" alt="Ganthä">
       </div>
 
       <div class="credits-group">
@@ -906,7 +968,7 @@
         </div>
         <div class="credit-entry">
           <div class="credit-entry-role">Dirección</div>
-          <span class="credit-entry-name">Coizta Grecko B.</span>
+          <span class="credit-entry-name">Coizta Grecko B</span>
         </div>
         <div class="credit-entry">
           <div class="credit-entry-role">Guión y Edición</div>
@@ -946,6 +1008,10 @@
           <span class="credit-entry-name">Derek de la Paz</span>
         </div>
         <div class="credit-entry">
+          <div class="credit-entry-role">Diseño Sonoro</div>
+          <span class="credit-entry-name">Gerry Domal</span>
+        </div>
+        <div class="credit-entry">
           <div class="credit-entry-role">Operador de Cámara y Dron</div>
           <span class="credit-entry-name">Alejandro Ballard</span>
         </div>
@@ -977,27 +1043,25 @@
   <script>
     // ==================== LANGUAGE TOGGLE ====================
     const html = document.documentElement;
-    const langToggle = document.getElementById('langToggle');
-    const labelEs = document.getElementById('label-es');
-    const labelEn = document.getElementById('label-en');
-    let isEn = false;
+    const langOpts = document.querySelectorAll('[data-set-lang]');
 
-    langToggle.addEventListener('click', () => {
-      isEn = !isEn;
-      html.setAttribute('data-lang', isEn ? 'en' : 'es');
-      html.lang = isEn ? 'en' : 'es';
-      langToggle.classList.toggle('on', isEn);
-      labelEs.classList.toggle('active', !isEn);
-      labelEn.classList.toggle('active', isEn);
-    });
+    langOpts.forEach(btn => btn.addEventListener('click', () => {
+      const lang = btn.dataset.setLang;
+      html.setAttribute('data-lang', lang);
+      html.lang = lang;
+      langOpts.forEach(b => {
+        const active = b === btn;
+        b.classList.toggle('active', active);
+        b.setAttribute('aria-pressed', active);
+      });
+    }));
 
     // ==================== MUSIC TOGGLE ====================
     const musicToggle = document.getElementById('musicToggle');
     const bgMusic = new Audio('assets/bg-music.mp3');
     bgMusic.loop = true;
-    bgMusic.preload = 'auto';
+    bgMusic.preload = 'none'; // music is off by default — don't download 2 MB until it's turned on
     bgMusic.volume = 0;
-    bgMusic.load();
     const MUSIC_VOL = 0.35;
     let musicFade = null;
     let musicPlayPromise = null;
@@ -1032,6 +1096,7 @@
     function setToggleUI() {
       musicToggle.classList.toggle('on', wantMusic);
       musicToggle.setAttribute('aria-label', wantMusic ? 'Desactivar musica' : 'Activar musica');
+      musicToggle.setAttribute('aria-pressed', wantMusic);
     }
 
     function startMusic() {
@@ -1318,7 +1383,7 @@
       <p>Al ampliar sus servicios, su capital y financiar proyectos productivos locales, esta plataforma tecnológica busca que unos 23 millones de mexicanos puedan ingresar al sistema financiero mexicano, obtener los beneficios económicos de la globalidad y hacer transacciones en tiempo real, como hacen todos los bancos comerciales del mundo.</p>
       <p>Si Google socializó el acceso a la información, La Cámara de la Gente –así se llama la plataforma– ofrece democratizar las transferencias de dinero a personas que necesitan mejores condiciones de las que ofrece hasta hoy el sistema financiero.</p>
       <p>Por ejemplo: un migrante de Los Ángeles pagará menos comisiones por enviar dinero a su familia en Puebla; un obrero de Guerrero sacará sus billetes escondidos debajo del colchón para resguardarlos en una entidad financiera confiable; un cafetalero de Chiapas tendrá la oportunidad de solicitar un crédito sin necesidad de empeñar su casa.</p>
-      <p>Para abrir boca, este proyecto colectivo se dará a conocer en el documental 'El código de la gente', que se presenta este miércoles 24 de septiembre en el Ciné Tonalá de la colonia Roma, en la Ciudad de México.</p>
+      <p>Para abrir boca, este proyecto colectivo se dará a conocer en el documental 'El Código de la Gente', que se presenta este miércoles 24 de septiembre en el Ciné Tonalá de la colonia Roma, en la Ciudad de México.</p>
       <p>En él se cuenta cómo diversos soñadores ya realizan reuniones con comunidades marginales para lograr la digitalización financiera de millones de mexicanos desatendidos por los bancos comerciales.</p>
       <p>En la pieza audiovisual, a la cual tuvo acceso MILENIO, se explica que "son miles de millones de dólares que circulan al año de remesas. Si sólo logramos [gestionar] el 1 por ciento de eso en el corto plazo, es una cantidad inmensa que se va a reciclar en favor de la ruralidad mexicana", dice Andrés Arauz, cofundador de La Cámara de la Gente. El 1 por ciento de 2024 fueron 647 millones de dólares.</p>
 
@@ -1348,7 +1413,7 @@
 
       <h4>El código que penetrará al sistema financiero nacional y global</h4>
       <p>En Inglaterra, el empresario vendedor de autos David Fishwick se enfrentó al sistema bancario tradicional inglés, que no había permitido la apertura de un banco en más de 100 años, para que le autorizara abrir un banco social en beneficio de Burnley, una ciudad industrial a tres horas en tren al norte de Londres. Su historia de éxito fue llevada a la plataforma Netflix con el nombre de 'El Banco de Dave'.</p>
-      <p>En México, un grupo de virtuosos de la tecnología, del código abierto y el desarrollo social quieren escribir su propia historia de película al desarrollar el documental 'El código de la gente'.</p>
+      <p>En México, un grupo de virtuosos de la tecnología, del código abierto y el desarrollo social quieren escribir su propia historia de película al desarrollar el documental 'El Código de la Gente'.</p>
       <p>Este proyecto de inclusión financiera nació hace tres años, del encuentro entre Isabel Cruz Hernández, directora de la Asociación Mexicana de Uniones de Crédito del Sector Social (Amucss), con 140 microbancos en 34 lenguas indígenas; el ex candidato presidencial en Ecuador y promotor del software y conocimiento libre, Andrés Arauz, y Roberto Valdovinos, ex titular del Instituto de los Mexicanos en el Exterior y creador de Migrante Vota.</p>
       <p>En 2023 presentaron su proyecto en Nueva Orléans, Luisiana, en una cumbre de la Fundación Interledger, que impulsa y beca proyectos de inclusión financiera para el desarrollo de comunidades excluidas, presidida por Stefan Thomas, también conocido por ser el millonario pionero de las criptomonedas quien guardó 200 millones de dólares en bitcoins y olvidó la contraseña.</p>
       <p>Estaban presentes la Agencia de Inclusión Financiera de Naciones Unidas, la Fundación Bill y Melinda Gates, y África Nenda, un acelerador de inclusión financiera en ese continente, entre otras organizaciones.</p>
@@ -1390,7 +1455,7 @@
       <p>By expanding their services and their capital and financing local productive projects, this technology platform aims to allow some 23 million Mexicans to enter Mexico's financial system, obtain the economic benefits of a globalised world and make transactions in real time, as every commercial bank in the world does.</p>
       <p>If Google socialised access to information, La Cámara de la Gente — the name of the platform — offers to democratise money transfers for people who need better terms than the financial system provides today.</p>
       <p>For example: a migrant in Los Angeles will pay lower fees to send money to their family in Puebla; a worker in Guerrero will take the bills hidden under the mattress and keep them safe in a trustworthy financial institution; a coffee grower in Chiapas will have the chance to apply for a loan without having to pawn their house.</p>
-      <p>As a first taste, this collective project will be unveiled in the documentary 'El código de la gente' ('The People's Code'), which premieres this Wednesday, 24 September, at Cine Tonalá in the Roma neighbourhood of Mexico City.</p>
+      <p>As a first taste, this collective project will be unveiled in the documentary 'El Código de la Gente' ('The People’s Code'), which premieres this Wednesday, 24 September, at Cine Tonalá in the Roma neighbourhood of Mexico City.</p>
       <p>It tells how a range of dreamers are already holding meetings with marginalised communities to achieve the financial digitalisation of millions of Mexicans underserved by commercial banks.</p>
       <p>In the film, to which MILENIO had access, it is explained that "billions of dollars in remittances circulate each year. If we manage to [handle] just 1 per cent of that in the short term, it is an immense amount that will be recycled in favour of rural Mexico," says Andrés Arauz, co-founder of La Cámara de la Gente. One per cent of the 2024 figure was 647 million dollars.</p>
 
@@ -1420,7 +1485,7 @@
 
       <h4>The code that will break into the national and global financial system</h4>
       <p>In England, car-dealer entrepreneur David Fishwick took on the traditional English banking system — which had not allowed a new bank to open in more than 100 years — to be authorised to open a community bank for the benefit of Burnley, an industrial town three hours by train north of London. His success story was made into a Netflix film called 'Bank of Dave'.</p>
-      <p>In Mexico, a group of virtuosos of technology, open source and social development want to write their own movie-worthy story by making the documentary 'El código de la gente'.</p>
+      <p>In Mexico, a group of virtuosos of technology, open source and social development want to write their own movie-worthy story by making the documentary 'El Código de la Gente'.</p>
       <p>This financial inclusion project was born three years ago, from the meeting between Isabel Cruz Hernández, director of the Mexican Association of Credit Unions of the Social Sector (Amucss), with 140 microbanks across 34 Indigenous languages; the former presidential candidate in Ecuador and advocate of free software and knowledge, Andrés Arauz; and Roberto Valdovinos, former head of the Institute for Mexicans Abroad and creator of Migrante Vota.</p>
       <p>In 2023 they presented their project in New Orleans, Louisiana, at a summit of the Interledger Foundation, which promotes and funds financial inclusion projects for the development of excluded communities, chaired by Stefan Thomas — also known as the pioneering crypto millionaire who kept 200 million dollars in bitcoin and forgot the password.</p>
       <p>Present were the United Nations' financial inclusion agency, the Bill and Melinda Gates Foundation, and AfricaNenda, a financial inclusion accelerator on that continent, among other organisations.</p>
@@ -1458,7 +1523,7 @@
 
     const articles = [
       {
-        img: 'assets/article-1-milenio-lg.jpg',
+        img: 'assets/article-1-milenio-lg.webp',
         source: 'MILENIO · CONCEPCIÓN PERALTA SILVERIO',
         titleEs: 'Del colchón al celular: Lanzan red para que microbancos capten remesas, ahorros y créditos',
         titleEn: 'From the mattress to the phone: a network is launched for microbanks to capture remittances, savings and credit',
@@ -1466,7 +1531,7 @@
         textEn: _milenioBodyEn
       },
       {
-        img: 'assets/article-2-envio-dinero.jpg',
+        img: 'assets/article-2-envio-dinero.webp',
         source: 'EL ECONOMISTA · FERNANDO GUTIÉRREZ',
         titleEs: 'Un puente entre los microbancos y el sistema financiero mexicano',
         titleEn: 'A bridge between microbanks and Mexico’s financial system',
@@ -1474,7 +1539,7 @@
         textEn: '<p>The Mexican Association of Credit Unions of the Social Sector (AMUCSS), with support from the Interledger Foundation, is promoting the creation of a clearing house designed to connect community savings and credit institutions with the Bank of Mexico’s Interbank Electronic Payment System (SPEI).</p><p>The proposal aims to overcome one of the main barriers facing financial institutions that operate in rural communities: although they maintain a direct relationship with their users, they do not always have the infrastructure needed to fully integrate into national payment systems.</p><p>One of the goals is for remittances sent from abroad to be deposited directly into accounts at cooperatives and community financial institutions. This would keep the money received from having to be turned immediately into cash, allowing it to feed into savings and credit services offered by the local institutions themselves.</p><p>The project thus proposes using payments technology not only to speed up transfers, but also to strengthen the role of the financial institutions that already work on the ground in rural communities.</p><p><a href="https://www.eleconomista.com.mx/sectorfinanciero/SPEI-para-todos-Amucss-presenta-proyecto-para-digitalizar-remesas-hacia-el-sector-rural-20230216-0042.html" target="_blank" rel="noopener" style="font-family:&quot;Source Code Variable&quot;,var(--font-body);text-decoration:underline">Read on El Economista</a></p>'
       },
       {
-        img: 'assets/article-3-dplnews.jpg',
+        img: 'assets/article-3-dplnews.webp',
         source: 'DPL NEWS · RAÚL PARRA',
         titleEs: 'Hacia un sistema financiero más abierto e interoperable',
         titleEn: 'Toward a more open and interoperable financial system',
@@ -1482,7 +1547,7 @@
         textEn: '<p>Cámara de la Gente was created with the aim of building an open payments ecosystem in which moving money between different systems is simpler, faster and cheaper. One of its first applications is remittances, which are especially important for many rural Mexican communities.</p><p>The proposal relies on Interledger’s open protocol to enable communication between financial systems that have traditionally operated independently. Interoperability would make it possible to cut out intermediaries and let small financial providers take part in an infrastructure they currently have only limited access to.</p><p>For community institutions, that transformation has a very concrete dimension: allowing their users to access digital money from their phones and reducing dependence on cash and on correspondent networks that can be costly for small entities.</p><p>The project combines technological innovation with regulation. Its promoters stress that an open system does not mean doing away with controls: participation is designed for regulated entities and must incorporate security, integrity and anti-money-laundering requirements.</p><p><a href="https://dplnews.com/interledger-y-amucs-impulsan-remesas-mas-baratas-municipios-marginados-mexico/" target="_blank" rel="noopener" style="font-family:&quot;Source Code Variable&quot;,var(--font-body);text-decoration:underline">Read on DPL News</a></p>'
       },
       {
-        img: 'assets/article-4-globaltreasurer.jpg',
+        img: 'assets/article-4-globaltreasurer.webp',
         source: 'THE GLOBAL TREASURER',
         titleEs: 'Cuando una remesa puede convertirse en inversión local',
         titleEn: 'When a remittance can become local investment',
@@ -1490,7 +1555,7 @@
         textEn: '<p>Sending money between the United States and Mexico has traditionally relied on private transfer services that can involve fees, intermediaries and a heavy dependence on cash. An initiative by the Interledger Foundation and People’s Clearinghouse proposes to change that model using open financial infrastructure.</p><p>The key is to let Mexican community banks receive remittances directly into their customers’ accounts. In this way, the funds become part of these institutions’ deposits and can help expand their capacity to offer credit and invest within the community itself.</p><p>The infrastructure uses the Interledger Protocol and the Rafiki software to connect different payment networks. In its first phase, the project is aimed at a network of 140 community banks linked to the Mexican Association of Credit Unions of the Social Sector.</p><p>The initiative also carries an ambition that goes beyond Mexico: to show that an interoperable infrastructure can serve as a model for connecting rural communities and populations traditionally underserved by large financial systems in other parts of the world.</p><p><a href="https://www.theglobaltreasurer.com/2024/08/05/us-mexico-remittances-initiative-empowers-mexican-rural-banks/" target="_blank" rel="noopener" style="font-family:&quot;Source Code Variable&quot;,var(--font-body);text-decoration:underline">Read on The Global Treasurer</a></p>'
       },
       {
-        img: 'assets/article-5-thebanker.jpg',
+        img: 'assets/article-5-thebanker.webp',
         source: 'THE BANKER · DAVIDE MONTAGNER',
         titleEs: 'Conectar las comunidades rurales a los pagos transfronterizos',
         titleEn: 'Connecting rural communities to cross-border payments',
@@ -1546,6 +1611,12 @@
 
       function esc(s) { return String(s).replace(/"/g, '&quot;'); }
 
+      // iOS doesn't pass the tap on our button through to the cross-origin Vimeo iframe,
+      // so autoplay=1 there makes Vimeo fall back to muted playback. On iOS we skip
+      // autoplay: the user taps Vimeo's own play button, which starts it with sound.
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+        (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
       function open(btn) {
         const label = esc(btn.getAttribute('aria-label') || 'Vídeo');
         const file = btn.dataset.videoFile;
@@ -1554,7 +1625,8 @@
           frame.innerHTML = '<video src="' + esc(file) + '" controls autoplay playsinline title="' + label + '"></video>';
         } else if (url) {
           const sep = url.indexOf('?') === -1 ? '?' : '&';
-          frame.innerHTML = '<iframe src="' + esc(url) + sep + 'autoplay=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="' + label + '"></iframe>';
+          const src = isIOS ? url : url + sep + 'autoplay=1';
+          frame.innerHTML = '<iframe src="' + esc(src) + '" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="' + label + '"></iframe>';
         } else {
           return;
         }
@@ -1562,6 +1634,7 @@
         prevFocus = document.activeElement;
         closeBtn.focus();
         document.body.style.overflow = 'hidden';
+        document.dispatchEvent(new CustomEvent('videomodal:open'));
 
         if (wantMusic) {
           musicDuckedForVideo = true;
@@ -1575,6 +1648,7 @@
         frame.innerHTML = '';   // clearing the node also stops playback
         document.body.style.overflow = '';
         if (prevFocus) prevFocus.focus();
+        document.dispatchEvent(new CustomEvent('videomodal:close'));
 
         if (musicDuckedForVideo) {
           musicDuckedForVideo = false;
@@ -1594,7 +1668,25 @@
       });
     })();
 
-    // ==================== GALLERY LIGHTBOX (.s3-gallery) ====================
+    // ==================== SECTION VIDEOS (lazy play) ====================
+    // The four section header videos only download and play when they come near the
+    // viewport, and pause when they leave it — they used to all autoplay on page load.
+    (function () {
+      const vids = document.querySelectorAll('video.mh-video');
+      if (!vids.length) return;
+      const play = v => { const p = v.play(); if (p && p.catch) p.catch(() => {}); };
+      if (!('IntersectionObserver' in window)) { vids.forEach(v => { v.preload = 'auto'; play(v); }); return; }
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          const v = e.target;
+          if (e.isIntersecting) { if (v.preload !== 'auto') v.preload = 'auto'; play(v); }
+          else if (!v.paused) v.pause();
+        });
+      }, { rootMargin: '300px 0px' });
+      vids.forEach(v => io.observe(v));
+    })();
+
+    // ==================== GALLERY LIGHTBOX (.s4-gallery) ====================
     (function () {
       const backdrop = document.getElementById('galleryLightboxBackdrop');
       if (!backdrop) return;
@@ -1606,7 +1698,7 @@
       const nextBtn = document.getElementById('galleryLightboxNext');
       const thumbsEl = document.getElementById('galleryLightboxThumbs');
 
-      const images = Array.from(document.querySelectorAll('.s3-gallery .s3-gallery-item img'));
+      const images = Array.from(document.querySelectorAll('.s4-gallery .s4-gallery-item img'));
       if (images.length === 0) return;
 
       let current = 0;
@@ -1619,7 +1711,7 @@
         thumb.className = 'gallery-lightbox-thumb';
         thumb.setAttribute('aria-label', img.getAttribute('alt') || ('Foto ' + (idx + 1)));
         const thumbImg = document.createElement('img');
-        thumbImg.src = img.getAttribute('src');
+        thumbImg.dataset.src = img.getAttribute('src'); // set on first open (see loadThumbs)
         thumbImg.alt = '';
         thumbImg.loading = 'lazy';
         thumb.appendChild(thumbImg);
@@ -1651,7 +1743,17 @@
         updateActiveThumb();
       }
 
+      // The lightbox is always in the layout (just transparent), so thumbnails with a
+      // real src would download every full-size photo on page load. Fill them on demand.
+      let thumbsLoaded = false;
+      function loadThumbs() {
+        if (thumbsLoaded) return;
+        thumbsLoaded = true;
+        thumbEls.forEach(t => { const i = t.querySelector('img'); if (i && i.dataset.src) i.src = i.dataset.src; });
+      }
+
       function open(idx) {
+        loadThumbs();
         current = idx;
         setContent();
         backdrop.classList.add('open');
@@ -1676,7 +1778,7 @@
       }
 
       images.forEach((img, idx) => {
-        const item = img.closest('.s3-gallery-item');
+        const item = img.closest('.s4-gallery-item');
         if (item) item.addEventListener('click', () => open(idx));
       });
 
@@ -1734,6 +1836,9 @@
       document.getElementById('collaboradoresPrev').addEventListener('click', () => { goTo(active - 1); startTimer(); });
       document.getElementById('collaboradoresNext').addEventListener('click', () => { goTo(active + 1); startTimer(); });
       document.getElementById('collaboradoresTotal').textContent = total;
+      // Hold the slider still while an interview (or any video) is playing
+      document.addEventListener('videomodal:open', () => clearInterval(timer));
+      document.addEventListener('videomodal:close', startTimer);
       goTo(0); startTimer();
     })();
 
@@ -1765,6 +1870,58 @@
       document.getElementById('crewNext').addEventListener('click', () => { goTo(active + 1); startTimer(); });
       document.getElementById('crewTotal').textContent = total;
       goTo(0); startTimer();
+    })();
+
+    // ==================== SMOOTH SCROLL (Lenis) ====================
+    // Guarded: if the CDN fails, the page keeps native scrolling and nothing below breaks.
+    (function () {
+      if (typeof Lenis === 'undefined') return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      const lenis = new Lenis({ lerp: 0.1, smoothWheel: true }); // touch keeps native scrolling
+      window.__lenis = lenis;
+
+      // Drive Lenis from GSAP's ticker so pinned ScrollTriggers stay in sync
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add(time => lenis.raf(time * 1000));
+        gsap.ticker.lagSmoothing(0);
+      } else {
+        const raf = time => { lenis.raf(time); requestAnimationFrame(raf); };
+        requestAnimationFrame(raf);
+      }
+
+      // Menu, article modal, video modal and lightbox all lock the page with
+      // body.style.overflow = 'hidden' — mirror that onto Lenis so the page
+      // underneath doesn't keep scrolling and inner panels scroll natively.
+      new MutationObserver(() => {
+        if (document.body.style.overflow === 'hidden') lenis.stop();
+        else lenis.start();
+      }).observe(document.body, { attributes: true, attributeFilter: ['style'] });
+
+      // In-page links (menu, "Mantenme informado"): smooth-scroll with Lenis.
+      // Runs after the menu's own click handler, which closes the menu first.
+      document.addEventListener('click', e => {
+        const a = e.target.closest('a[href^="#"]');
+        if (!a) return;
+        const id = a.getAttribute('href');
+        if (id.length < 2) return;
+        const target = document.querySelector(id);
+        if (!target) return;
+        e.preventDefault();
+        // Lazy images above the target load during the trip and push it further
+        // down, so re-aim on arrival until it actually sits at the top.
+        const go = tries => lenis.scrollTo(target, {
+          force: true,
+          onComplete: () => {
+            const off = target.getBoundingClientRect().top;
+            const atBottom = lenis.scroll >= lenis.limit - 1;
+            if (Math.abs(off) > 2 && !atBottom && tries < 4) go(tries + 1);
+          }
+        });
+        go(0);
+        history.replaceState(null, '', id);
+      });
     })();
 
     // ==================== STORY SCROLL ====================
@@ -1806,12 +1963,12 @@
 
       ScrollTrigger.refresh();
 
-      // Burger color: dark when over S2 light section-body
-      const s2Body = document.querySelector('.section-s2 .section-body');
+      // Burger color: dark when over S3 light section-body
+      const s3Body = document.querySelector('.section-s3 .section-body');
       const burgerEl = document.getElementById('burger');
-      if (s2Body && burgerEl) {
+      if (s3Body && burgerEl) {
         ScrollTrigger.create({
-          trigger: s2Body,
+          trigger: s3Body,
           start: 'top top',
           end: 'bottom top',
           onEnter: () => burgerEl.classList.add('on-light'),
